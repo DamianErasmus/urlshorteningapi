@@ -1,0 +1,231 @@
+/* INDEX */
+/* ---------------------------------------- */
+/* 1. Font Colours*/
+/* 2. Background Colours */
+/* 3. Font Styles */
+/* 3. Padding */
+/* 4. Buttons */
+/* 5. Grids */
+/* 6. Flex */
+/* 7. Card */
+/* 8. Fill */
+/* ---------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Font Colours */
+/* ---------------------------------------- */
+.text_cyan {
+    color: var(--primary-cyan);
+}
+
+.text_grey {
+    color: var(--neutral-grey-vio);
+}
+
+.text_l_grey {
+    color: var(--neutral-grey);
+}
+
+.text_dark {
+    color: var(--neutral-dark-vio);
+}
+
+.text_dark_blue {
+    color: var(--neutral-dark-blue);
+}
+
+.text_white {
+    color: #fff;
+}
+
+.text_trans {
+    color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Background Colours */
+/* ---------------------------------------- */
+.bg_white {
+    background-color: #fff;
+}
+
+.bg_grey {
+    background-color: var(--neutral-grey);
+}
+
+.bg_dark_blue {
+    background-color: var(--neutral-dark-blue);
+}
+
+.bg_dark_violet {
+    background-color: var(--neutral-dark-vio);
+}
+
+
+
+
+
+
+/* Font Styles */
+/* ---------------------------------------- */
+.sm_text {
+    font-size: 14px;
+}
+
+.heading_text {
+    font-size: 45px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+
+
+/* Padding */
+/* ---------------------------------------- */
+.py {
+    padding: 1rem 0;
+}
+
+
+
+
+
+
+/* Buttons */
+/* ---------------------------------------- */
+.btn {
+    border: none;
+    border-radius: 100px;
+    padding: 10px 10px;
+    width: 190px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: var(--primary-cyan);
+    color: rgba(250, 250, 250, 0.9);
+}
+
+.btn_dark {
+    background-color: var(--neutral-dark-vio);
+}
+
+.btn:hover {
+    cursor: pointer;
+    filter: brightness(150%);
+}
+
+
+
+
+
+
+
+
+/* Grids */
+/* --------------------------------------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid_6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+
+
+
+
+/* Flex */
+/* --------------------------------------- */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+/* 7. Card */
+/* ---------------------------------------- */
+.card {
+    max-width: 400px;
+    height: 300px;
+}
+
+.card_icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-violet);
+    border-radius: 50%;
+    position: relative;
+    top: 35px;
+    left: 35px;
+}
+
+.card img {
+    width: 40px;
+}
+
+.card .card_details {
+    padding: 50px 40px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.card h3 {
+    padding: 10px 0;
+    font-size: 16;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+
+
+
+
+/* 8. Fill */
+.fill {
+    fill: var(--primary-cyan);
+}
+
+
+/* Error Message */
+.error-message {
+    color: var(--secondary-red);
+    font-style: italic;
+}
