@@ -43,7 +43,7 @@ submitButton.addEventListener("click", function (event) {
     var invalidFields = form.querySelectorAll(":invalid"),
         errorMessages = form.querySelectorAll(".error-message"),
         parent;
-    
+
     var shortenGrid = document.querySelector(".shorten .grid")
     var errorDiv = document.querySelector(".error")
     var shortenBtn = document.querySelector(".shorten #shortenit")
@@ -102,12 +102,20 @@ if (sessionStorage.length > 1) {
 //if button is clicked
 shortenButton.addEventListener("click", function () {
     let check = form.checkValidity()
+    let Website = document.getElementById('website').value;
 
-    if (!check) {
+    console.log(Website)
+
+    if (!check || Website === "") {
         console.log("form not valid")
 
     } else {
-        let Website = document.getElementById('website').value;
+        //for changing the button
+        var shortBtn = document.querySelector(".shorten form .btn")
+        shortBtn.style.backgroundColor = "var(--neutral-dark-vio)"
+        shortBtn.value = "Shortening..."
+
+
 
         let div = document.createElement("div")
 
@@ -141,7 +149,10 @@ shortenButton.addEventListener("click", function () {
                 let num = 0 + i
             }
 
+
             function firstFunction(_callback) {
+                shortBtn.style.backgroundColor = "var(--primary-cyan)"
+                shortBtn.value = "Shorten It!";
                 location.reload()
             }
 
@@ -164,13 +175,20 @@ const textField = document.getElementById("website")
 textField.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         let check = form.checkValidity()
+        let Website = document.getElementById('website').value;
 
-        if (!check) {
-            console.log("no")
+        console.log(Website)
+
+        if (!check || Website === "") {
+            console.log("form not valid")
 
         } else {
-            console.log("yes")
-            let Website = document.getElementById('website').value;
+            //for changing the button
+            var shortBtn = document.querySelector(".shorten form .btn")
+            shortBtn.style.backgroundColor = "var(--neutral-dark-vio)"
+            shortBtn.value = "Shortening..."
+
+
 
             let div = document.createElement("div")
 
@@ -188,7 +206,7 @@ textField.addEventListener('keypress', function (e) {
                 // Begin accessing JSON data here
                 var data = JSON.parse(this.response)
 
-                var savedLink = '<div class="prev_short flex"><div class="url">' + Website + '</div><div class="short flex"><div class="short_url">' + data.result.short_link + '</div><button class="btn copy">Copy</button></div></div>'
+                var savedLink = '<div class="prev_short flex"><div class="url">' + Website + '</div><div class="short flex"><div class="short_url text_cyan">' + data.result.short_link + '</div><div class="btn_div"><button class="btn copy">Copy</button></div></div></div>'
 
                 let count = sessionStorage.length
 
@@ -204,7 +222,10 @@ textField.addEventListener('keypress', function (e) {
                     let num = 0 + i
                 }
 
+
                 function firstFunction(_callback) {
+                    shortBtn.style.backgroundColor = "var(--primary-cyan)"
+                    shortBtn.value = "Shorten It!";
                     location.reload()
                 }
 
